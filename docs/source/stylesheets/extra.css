@@ -1,0 +1,41 @@
+[data-md-color-scheme=default] {
+    --md-typeset-a-color: #0075c8;
+    --md-selection-bg-color: #003781;
+    --md-selection-text-color: #fafafa;
+}
+
+[data-md-color-primary=custom] {
+    --md-primary-fg-color: #003781;
+    --md-primary-fg-color--light: #003781;
+    --md-primary-fg-color--dark: #0075c8;
+    --md-primary-bg-color: #fff;
+    --md-primary-bg-color--light: hsla(0,0%,100%);
+    --md-typeset-a-color: #0075c8;
+}
+
+[data-md-color-scheme=slate][data-md-color-primary=custom] {
+    --md-typeset-a-color: #0075c8;
+}
+
+::selection {
+    background-color: var(--md-selection-bg-color);
+    color: var(--md-selection-text-color);
+}
+
+::-moz-selection {
+    background-color: var(--md-selection-bg-color);
+    color: var(--md-selection-text-color);
+}
+
+.md-typeset a:is(:hover, :active, :after, :visited) {
+    text-decoration: underline;
+    color: var(--md-typeset-a-color);
+}
+
+.text-green {
+    color: #25a569;
+}
+
+.text-light-blue {
+    color: #0075c8;
+}
