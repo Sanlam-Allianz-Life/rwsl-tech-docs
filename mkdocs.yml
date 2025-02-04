@@ -120,6 +120,9 @@ plugins:
   - macros
   - render_swagger
 
+repo_url: https://github.com/Sanlam-Allianz-Life/rwsl-tech-docs
+repo_name: Sanlam-Allianz-Life/rwsl-tech-docs
+
 markdown_extensions:
   - tables
   - toc:
