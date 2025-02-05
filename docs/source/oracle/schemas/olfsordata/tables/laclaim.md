@@ -1,0 +1,1 @@
+# Claims Details Table

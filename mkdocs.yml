@@ -1,0 +1,157 @@
+site_name: RWSL Technical Documentation
+copyright: Copyright &copy; Sanlam Allianz Life Insurance Plc
+
+docs_dir: docs/source
+
+theme: 
+    name: material
+    logo: images/rw.svg
+    favicon: images/favicon.ico
+    palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-6
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-6
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-6
+        name: Switch to dark mode
+    
+    features:
+      - search.suggest
+      - search.highlight
+      - navigation.sections
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.indexes
+      - navigation.top
+      - navigation.path
+      - content.code.copy
+
+nav:
+  - Overview:
+    - Overview: index.md
+    - AIMS: AIMS/index.md
+    - Oracle: oracle/index.md
+    - Digital Portals: portals/index.md
+    - Integrations: integrations/index.md
+    - Internal Applications: internal_applications/index.md
+    - Topics: topics/index.md
+  - AIMS:
+    - Overview: AIMS/index.md
+    - Ordinary Life:
+      - Overview: AIMS/ordinary_life/index.md
+      - Underwriting: AIMS/ordinary_life/underwriting.md
+      - Actuarial: AIMS/ordinary_life/actuarial.md
+      - Claims: AIMS/ordinary_life/claims.md
+      - Value Acquired: AIMS/ordinary_life/value_acquired.md
+      - Policy Statement: AIMS/ordinary_life/policy_mgnt.md
+    - Group Life: 
+      - Overview: AIMS/group_life/index.md
+    - General Ledger:
+      - Overview: AIMS/general_ledger/index.md
+    - Internal Systems:
+      - Overview: AIMS/internal_systems/index.md
+  - Oracle:
+    - Overview: oracle/index.md
+    - Schemas:
+      - OLFSORDATA:
+        - Overview: oracle/schemas/olfsordata/index.md
+        - LACLNT: oracle/schemas/olfsordata/tables/laclnt.md
+        - LAPOL: oracle/schemas/olfsordata/tables/lapol.md
+        - LAPRO: oracle/schemas/olfsordata/tables/lapro.md
+        - LADEP: oracle/schemas/olfsordata/tables/ladep.md
+        - LAPBEN: oracle/schemas/olfsordata/tables/lapben.md
+        - LAMED: oracle/schemas/olfsordata/tables/lamed.md
+        - SALARYDEDUCT: oracle/schemas/olfsordata/tables/salarydeduct.md
+        - SALSERIALS: oracle/schemas/olfsordata/tables/salserials.md
+        - LACLAIM: oracle/schemas/olfsordata/tables/laclaim.md
+      - GRPLFDATA:
+        - Overview: oracle/schemas/grplfdata/index.md
+      - OLGLDATA:
+        - Overview: oracle/schemas/olgldata/index.md
+        - PAYREQSTMULTI: oracle/schemas/olgldata/tables/payreqstmulti.md
+        - PAYREQSTMULTISUM: oracle/schemas/olgldata/tables/payreqstmultisum.md
+        - PENDING_TRANSACTIONS: oracle/schemas/olgldata/tables/pending_transactions.md
+      - EXT:
+        - Overview: oracle/schemas/ext/index.md
+        - AGENT_REPORT: oracle/schemas/ext/tables/agent_report.md
+      - OLFSORCOMMON:
+        - Overview: oracle/schemas/olfsorcommon/index.md
+      - BNRVIE:
+        - Overview: oracle/schemas/bnrvie/index.md
+  - Digital Portals:
+    - Overview: portals/index.md
+    - Agents: portals/agents.md
+    - Customers: portals/customers.md
+  - Integrations:
+    - Overview: integrations/index.md
+    - TransUnion (CRB): integrations/crb.md
+    - NIDA: integrations/nida.md
+    - GT Bank: integrations/gtbank.md
+    - MIFOTRA: integrations/mifotra.md
+    - Urubuto: integrations/urubuto.md
+    - Money Phone: integrations/money_phone.md
+  - Internal Applications:
+    - Overview: internal_applications/index.md
+    - EDMS: internal_applications/edms.md
+    - SAGE: internal_applications/sage.md
+  - Topics:
+    - Introduction: topics/index.md
+    - Products: topics/products.md
+    - Underwriting: topics/underwriting.md
+    - Value Acquired: topics/value_acquired.md
+  - Release Notes: release_notes.md
+
+plugins:
+  - search:
+      separator: '[\s\-\,\:\!\=\[\]\(\)\"\}\{]+'
+  - monorepo
+  - macros
+  - render_swagger
+
+repo_url: https://github.com/Sanlam-Allianz-Life/rwsl-tech-docs
+repo_name: rwsl-tech-docs
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - footnotes
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
